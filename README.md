@@ -212,3 +212,70 @@
     <img width="405" alt="image" src="https://github.com/MyNameIsSyukra/Jarkom-Modul-4-F08-2023/assets/85614845/489c8085-7183-40e3-b746-1b2d65d8a9ed">
       
 ### CIDR
+- Penamaan Subnetting
+  ![CPT update](https://github.com/MyNameIsSyukra/Jarkom-Modul-4-F08-2023/assets/90988646/d9b24bbf-f6cf-46bd-94cd-df9a4ba2fb20)
+
+- Tree untuk Mendapatkan NetMask
+  ![TreeCIDRUPDATE](https://github.com/MyNameIsSyukra/Jarkom-Modul-4-F08-2023/assets/90988646/e42cdc69-d25f-49ac-adea-5442c7c4418d)
+
+- Dengan penamaan NID
+  ![image](https://github.com/MyNameIsSyukra/Jarkom-Modul-4-F08-2023/assets/90988646/a632ab56-fb3d-45a0-9c95-f77743568858)
+
+- Tabel Penggabungan Subnet
+  ![image](https://github.com/MyNameIsSyukra/Jarkom-Modul-4-F08-2023/assets/90988646/fe5f5631-282e-4247-84b5-7013ece7e22c)
+  https://docs.google.com/spreadsheets/d/1Aab66gskVDhU0GBw5qe_wUid7RKoZwmxajeAsVkbJ5g/edit?usp=sharing
+
+- Kemudian Lakukan konfigurasi interface pada setiap subnet
+  Contoh untuk subnet A18
+  ![image](https://github.com/MyNameIsSyukra/Jarkom-Modul-4-F08-2023/assets/90988646/df71bb33-0bf0-4418-a234-67ed9cd2f2fe)
+  Dan itu dilakukan pada setia subnet A yang ada
+
+- Routing
+  
+  Routing dilakukan pada setiap router yang ada pada subnet terkecil, pada kasus ini subnet A.
+  kita ambil contoh subnet dibawah berikut yaitu A16, A17, A18
+  ![image](https://github.com/MyNameIsSyukra/Jarkom-Modul-4-F08-2023/assets/90988646/2b7aa149-b50c-4c95-a5c8-3687522c581f)
+  
+  kita mulai dari subnet terluar,
+  - A17 dan A18 
+    
+    Pada router Flamme dilakukan konfigurasi seperti berikut
+    ![image](https://github.com/MyNameIsSyukra/Jarkom-Modul-4-F08-2023/assets/90988646/b791911f-1412-4eaa-b050-b64e9df51ab1)
+    - Netword diisi dengan NID pada A18, akan tetapi digit terakhir ditambah 1.
+    - Netmas merupaka Netmask perhitungan
+    - Next Hop diisi dengan IP pada Himmel yang mengarah ke Flammel
+      
+    Pada Router Himmel dilakukan Konfigurasi seperti Berikut
+    ![image](https://github.com/MyNameIsSyukra/Jarkom-Modul-4-F08-2023/assets/90988646/a4e533aa-8df9-40eb-a8e1-42826b69ac4e)
+    - Network diisi dengan 0.0.0.0
+    - Netmask juga 0.0.0.0
+    - Next hop diisi dengan Ip gateway pada router Flmme sebelumnya
+      
+  - A16 dengan A17, dan A18
+
+    Untuk kasus ini kita hanya melakukan konfigurasi pada Frieren, pertama konfigurasi untuk subnet A17
+    ![image](https://github.com/MyNameIsSyukra/Jarkom-Modul-4-F08-2023/assets/90988646/c9996c3e-84de-4b87-8fdd-c1fedef9aea8)
+    - Netword diisi dengan NID dari A17
+    - Mask juga diisi dengan Mask yang didapatkan dari perthitungan
+    - Next hop diisi dengan IP gateway pada Flammel yang mengarah ke Frieren
+
+    konfigurasi untuk subnet A18
+    ![image](https://github.com/MyNameIsSyukra/Jarkom-Modul-4-F08-2023/assets/90988646/20ec8654-ff9c-40c1-b324-3ae28f1172a7)
+    - Netword diisi dengan NID dari A18
+    - Mask juga diisi dengan Mask yang didapatkan dari perthitungan
+    - Next hop tetap diisi dengan IP gateway pada Flammel yang mengarah ke Frieren
+
+Konfigurasi tersebut dilakakan untuk semua gabungan subnet yang ada, seperti contoh 
+    - A16 -> A20 -> A21 : maka router yang ada pada A20 dilakukan konfigurasi routing untuk A21. Untuk Router yang ada pada Subnet A16, dilakukan konfigurasi routing untuk A20, dan A21
+    - Dikarenakan Pusatnya berada pada Aura, Maka konfigurasi routing terbanyak ada pada router aura sebanyak 18 Routing, 18 didapatkan dari 21 Subnet A yang ada dikurangi dengan 3 yang ada di sekitar Aura
+
+    
+
+
+
+
+
+  
+
+  
+  
