@@ -216,7 +216,8 @@
   ![CPT update](https://github.com/MyNameIsSyukra/Jarkom-Modul-4-F08-2023/assets/90988646/d9b24bbf-f6cf-46bd-94cd-df9a4ba2fb20)
 
 - Tree untuk Mendapatkan NetMask
-  ![TreeCIDRUPDATE](https://github.com/MyNameIsSyukra/Jarkom-Modul-4-F08-2023/assets/90988646/e42cdc69-d25f-49ac-adea-5442c7c4418d)
+  ![image](https://github.com/MyNameIsSyukra/Jarkom-Modul-4-F08-2023/assets/90988646/0f3a0766-47de-4e87-a8d5-0744ab7e82d1)
+
 
 - Dengan penamaan NID
   ![image](https://github.com/MyNameIsSyukra/Jarkom-Modul-4-F08-2023/assets/90988646/a632ab56-fb3d-45a0-9c95-f77743568858)
